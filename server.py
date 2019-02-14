@@ -31,13 +31,11 @@ class Server(BaseHTTPRequestHandler):
 
         return
 
-
 def run():
     print('starting server...')
     server_address = (HOST_NAME, PORT_NUMBER)
     httpd = HTTPServer(server_address, Server)
     print('running server...')
     httpd.serve_forever()
-
 
 run()
